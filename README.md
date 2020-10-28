@@ -22,9 +22,21 @@ Results from the various statistical analyses conducted in RStudio.
 
 The results of the linear regression model indicate that a vehicle's length and ground clearance (as well as intercept) are statistically likely to provide non-random amounts of variance to the mpg values in the dataset, or that the length and ground clearance affect mpg. Though the p-value of the vehicle weight indicates it is not statistically significant, the low p-value signifies it could play a factor in mpg, but more analysis or data is needed.
 
-The slope of the linear model is not zero because each dependent value is not determined by random chance and/or error and cthe slope can be used for predictive modeling.
+The slope of the linear model is not zero because each dependent value is not determined by random chance and/or error and the slope can be used for predictive modeling.
 
-The r-squared value represents how well the regression model approximates real-world data points. In this case, the r-squared value displays that this model is effective about 71 percent of the time for this data set, which I would say is fairly effective.
+The r-squared value represents how well the regression model approximates the data points. In this case, the r-squared value displays that this model describes about 71 percent of the mpg for this dataset, which I would say is fairly effective. If we wanted to increase the effectiveness, we might want to look at including other factors. The low p-value also shows that my formula describes the data accurately.
 
 ![Deliverable 1](Images/Deliverable1.PNG)
 
+## Summary Statistics on Suspension Coils
+
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
+
+ Our outputs show that it meets the specification when it is aggregated in total. But, when the data is broken down by individual lot, Lots 1 and 2 meet the specification, but Lot 3 does not meet the specification because the variance of the suspension coils in Lot 3 exceed 100 pounds.
+
+Summary of aggregated data:
+
+![summary table](Images/Deliverable2.5.PNG)
+
+Data broken down by individual lot:
+![individual](Images/Deliverable2.PNG)
