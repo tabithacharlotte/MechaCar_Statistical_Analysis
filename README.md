@@ -40,6 +40,7 @@ Summary of aggregated data:
 ![summary table](Images/Deliverable2.5.PNG)
 
 Data broken down by individual lot:
+
 ![individual](Images/Deliverable2.PNG)
 
 ## T-Tests on Suspension Coils
