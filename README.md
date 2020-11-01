@@ -1,19 +1,20 @@
 # MechaCar_Statistical_Analysis
 
 ## Project Overview
-A few weeks after starting his new role, Jeremy is approached by upper management about a special project. AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management has called on Jeremy and the data analytics team to review the production data for insights that may help the manufacturing team.
+Review production data for insights that may help the manufacturing team.
 
-### Purpose
-In this challenge, you’ll help Jeremy and the data analytics team do the following:
+### Objectives
 
-Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes
-Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots
-Run t-tests to determine if the manufacturing lots are statistically different from the mean population
-Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
+- Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes
+- Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots
+- Run t-tests to determine if the manufacturing lots are statistically different from the mean population
+- Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers.
 
 ## Resources
-- The `MechaCar_mpg.csv` dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. Using your knowledge of R, you’ll design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file. Then, you’ll write a short interpretation of the multiple linear regression results in the README.md.
-- 
+- The `MechaCar_mpg.csv` dataset (within the `MechaCarAnalysis/Resources` folder) contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. 
+- The MechaCar `Suspension_Coil.csv` (within the `MechaCarAnalysis/Resources` folder) dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots
+- The `MecaCarAnalysis` folder also contains the RStudio code for this analysis titled `MechaCarChallenge.R`
+
 ## Results
 
 Results from the various statistical analyses conducted in RStudio.
@@ -40,3 +41,29 @@ Summary of aggregated data:
 
 Data broken down by individual lot:
 ![individual](Images/Deliverable2.PNG)
+
+## T-Tests on Suspension Coils
+
+To determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch, I wrote and executed the following code in RStudio:
+
+![test1](Images/ttest1.PNG)
+
+The output, as shown above, indicates that the p-value is more than the significance level 0.05 and therefore the mean weight of the PSI across all manufacturing lots is not statistically different from the population mean of 1,500 pounds per square inch.
+
+To find out whether the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch, I then ran the following code:
+
+![test2](Images/ttestgroup.PNG)
+
+The results shown indicate that the PSI for manufacturing lots 1 and 2 are not statistically different from the population mean of 1,500 PSI. However, Lot 3 has a statistically different mean suspension coil PSI from the population mean.
+
+## Study Design: MechaCar vs Competition
+
+To quantify how the MechaCar performs against the competition, I would suggest comparing MechaCar metrics to the metrics from an electric vehicle.
+
+We could compare cost, fuel efficiency, safety rating and maintenance cost.
+
+To do so, we could set up two sample t-tests to see if there are statistical differences between the distribution means between MechaCar metrics and electric vehicle metrics for the factors we've chosen to look at, and then delve more into why those means might exist with further testing.
+
+The null hypothesis for the two sample t-test is that the two groups are equal.
+
+To run this test, we would need data for an electric vehicle and the MechaCar vehicle. What I would look at for the electric vehicle is data on Tesla car models and data on MechaCars. The data would need to contain information about cost, fuel efficiency, safety ratings and maintenance costs. We can then compare across categories using two-sample t-tests.
